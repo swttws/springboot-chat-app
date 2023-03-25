@@ -1,0 +1,40 @@
+server:
+  port: 6666
+
+spring:
+  datasource:
+    url: jdbc:mysql://你的服务器地址:3306/chat?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: #密码
+  application:
+    name: plate-from-app
+  redis:
+    port: 6379
+    password: #密码
+    host: #你的服务器地址
+    lettuce:
+      pool:
+        max-idle: 38
+        min-idle: 0
+        max-active: 8
+        max-wait: -1
+      shutdown-timeout: 320
+  rabbitmq:
+    host: #你的服务器地址
+    port: 5672
+    username: admin
+    password: admin
+
+#文件上传配置
+fdfs:
+  # 连接超时时间
+  connect-timeout: 30000
+  # 读取时间
+  so-timeout: 30000
+  # tracker服务配置地址列表
+  tracker-list: #你的服务器地址
+
+
+
+
